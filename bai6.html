@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 6: Sử dụng AI có trách nhiệm - Đặng Tiến Mạnh</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .back-btn {
+      text-decoration: none;
+      color: #0284c7;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      color: #0369a1;
+      transform: translateX(-3px);
+    }
+    .report-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 40px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    h1 { color: #111827; font-weight: 700; font-size: 1.8rem; line-height: 1.4; }
+    
+    h2 { 
+      color: #000000; 
+      font-weight: 600; 
+      font-size: 1.35rem; 
+      margin-top: 35px; 
+      margin-bottom: 15px; 
+      border-left: 4px solid #000000; 
+      padding-left: 12px; 
+    }
+    
+    h3 { font-size: 1.15rem; font-weight: 600; color: #0284c7; margin-top: 25px; margin-bottom: 10px; }
+    
+    .badge-student { background-color: #f1f5f9; color: #475569; padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; }
+    
+    .dos-donts-box {
+      border-radius: 8px;
+      padding: 20px;
+      height: 100%;
+    }
+    .box-dos { background-color: #f0fdf4; border: 1px solid #bbf7d0; }
+    .box-donts { background-color: #fef2f2; border: 1px solid #fecaca; }
+
+    .img-evidence { border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px; background: #ffffff; width: 100%; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .img-caption { font-style: italic; color: #64748b; font-size: 0.85rem; text-align: center; margin-top: 10px; margin-bottom: 25px; }
+    
+    .highlight-box-success { 
+      background-color: #f0fdf4; 
+      border-left: 4px solid #16a34a; 
+      padding: 15px 20px; 
+      border-radius: 0 8px 8px 0; 
+      margin: 30px 0 10px 0; 
+    }
+    
+    .table-custom th { background-color: #1e293b; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5" style="max-width: 950px;">
+    
+    <a href="index.html#portfolio" class="back-btn mb-4">
+      <i class="bi bi-arrow-left"></i> Quay lại Trang chủ Portfolio
+    </a>
+
+    <div class="report-card">
+      <div class="border-bottom pb-4 mb-4">
+        <span class="text-uppercase text-muted small fw-bold">Bài tập 6</span>
+        <h1 class="mt-1">SỬ DỤNG TRÍ TUỆ NHÂN TẠO CÓ TRÁCH NHIỆM TRONG HỌC THUẬT & NGHIÊN CỨU</h1>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge-student"><i class="bi bi-person-fill"></i> Đặng Tiến Mạnh</span>
+          <span class="badge-student"><i class="bi bi-card-text"></i> MSV: 25020682</span>
+          <span class="badge-student"><i class="bi bi-mortarboard-fill"></i> Lớp: CE7 - UET</span>
+        </div>
+      </div>
+
+      <h2>I. Nghiên cứu chính sách sử dụng AI tại các trường Đại học</h2>
+      <p>Để có cái nhìn toàn diện, em đã nghiên cứu các quy định về liêm chính học thuật của Đại học Quốc gia Hà Nội (VNU/UET) và so sánh với Đại học FPT, hai cơ sở giáo dục đào tạo Công nghệ thông tin hàng đầu tại Việt Nam.</p>
+      
+      <div class="table-responsive mt-3">
+        <table class="table table-bordered table-striped table-custom">
+          <thead>
+            <tr>
+              <th width="20%">Tiêu chí</th>
+              <th width="40%">Đại học Quốc gia Hà Nội (VNU - UET)</th>
+              <th width="40%">Đại học FPT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">Quan điểm cốt lõi</td>
+              <td>Đề cao tuyệt đối Liêm chính học thuật. Bất kỳ hành vi sử dụng AI để thay thế nỗ lực cá nhân đều vi phạm quy chế thi cử và làm bài tập.</td>
+              <td>Khuyến khích ứng dụng công nghệ mới nhưng đặt tính liêm chính học thuật lên hàng đầu.</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Chính sách & Xử lý</td>
+              <td>Không có văn bản cấm AI cụ thể, nhưng cấm gian lận, đạo văn dưới mọi hình thức. Sinh viên tự chịu trách nhiệm về tính nguyên bản của source code và nội dung nộp.</td>
+              <td>Yêu cầu khai báo rõ ràng. Nếu lạm dụng AI không trích dẫn sẽ bị xử lý theo quy định đạo văn.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>II. Ranh giới của việc sử dụng AI (Do's & Don'ts)</h2>
+      <p>Việc sử dụng AI trong học tập và lập trình cần tuân thủ ranh giới rõ ràng để không làm thui chột tư duy phản biện:</p>
+      
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          <div class="dos-donts-box box-dos">
+            <h5 class="text-success fw-bold"><i class="bi bi-check-circle-fill"></i> ĐƯỢC PHÉP (Nên làm)</h5>
+            <ul class="mb-0 mt-3 text-success" style="opacity: 0.9;">
+              <li>Sử dụng AI để gợi ý tưởng, lập dàn ý bài tập.</li>
+              <li>Nhờ AI giải thích khái niệm, dịch thuật hoặc tìm lỗi sai (debug) trong code.</li>
+              <li>Đặt câu hỏi có ngữ cảnh rõ ràng, yêu cầu AI hướng dẫn từng bước như một trợ lý học tập.</li>
+              <li>Khai báo và trích dẫn minh bạch sự hỗ trợ của AI trong báo cáo sản phẩm.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="dos-donts-box box-donts">
+            <h5 class="text-danger fw-bold"><i class="bi bi-x-circle-fill"></i> KHÔNG ĐƯỢC PHÉP (Vi phạm)</h5>
+            <ul class="mb-0 mt-3 text-danger" style="opacity: 0.9;">
+              <li>Yêu cầu AI viết toàn bộ code hoặc làm bài tập hoàn chỉnh từ A-Z để nộp.</li>
+              <li>Copy - paste 100% đáp án của AI mà không qua kiểm chứng, đánh giá lại.</li>
+              <li>Chia sẻ dữ liệu cá nhân, dữ liệu bảo mật hoặc nhạy cảm của trường lên các mô hình AI công cộng.</li>
+              <li>Cố tình che giấu việc sử dụng AI nhằm mục đích đánh lừa giảng viên.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2>III. Minh chứng ứng dụng AI có trách nhiệm</h2>
+      <p>Dưới đây là các minh chứng thể hiện việc tương tác và khai thác AI đúng cách, đảm bảo AI chỉ đóng vai trò là "người hướng dẫn" thay vì làm hộ toàn bộ công việc:</p>
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <img src="bai6/anh1.png" alt="Minh chứng 1" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai6/anh1.png'">
+          <div class="img-caption">Hình 1: Thiết lập ngữ cảnh và vai trò để AI đóng vai trò định hướng tư duy học thuật</div>
+        </div>
+        <div class="col-md-6">
+          <img src="bai6/anh2.png" alt="Minh chứng 2" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai6/anh2.jpg'">
+          <div class="img-caption">Hình 2: Sử dụng AI phân tích cấu trúc lỗi và giải thích giải pháp lập trình hệ thống</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <img src="bai6/anh3.png" alt="Minh chứng 3" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai6/anh3.png'">
+          <div class="img-caption">Hình 3: Đặt câu hỏi làm rõ các khái niệm chuyên ngành phức tạp</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai6/anh4.png" alt="Minh chứng 4" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai6/anh4.png'">
+          <div class="img-caption">Hình 4: Đánh giá, đối chiếu tính xác thực của dữ liệu đầu ra từ mô hình AI</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai6/anh5.png" alt="Minh chứng 5" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai6/anh5.png'">
+          <div class="img-caption">Hình 5: Khai báo minh bạch phạm vi hỗ trợ của công nghệ trong học tập</div>
+        </div>
+      </div>
+
+      <h2>IV. Thiết kế Infographic: Nguyên tắc sử dụng AI</h2>
+      <p>Dưới đây là Infographic <strong>"Quy tắc sử dụng AI có trách nhiệm trong học tập và nghiên cứu"</strong> dành cho sinh viên UET, được em tổng hợp và tự thiết kế dựa trên chính sách liêm chính học thuật:</p>
+      
+      <div class="text-center mt-4">
+        <img src="bai6/anh6.png" alt="Infographic Quy tắc sử dụng AI" class="img-evidence" style="max-width: 800px;" onerror="this.src='https://placehold.co/800x1200?text=bai6/anh6.jpg'">
+        <div class="img-caption">Hình 6: Infographic hướng dẫn quy trình kiểm soát AI an toàn (Trước - Trong - Sau khi sử dụng)</div>
+      </div>
+
+      <div class="highlight-box-success mt-4">
+        <h4 class="text-success fw-bold mb-2"><i class="bi bi-check-circle-fill"></i> V. Kết luận</h4>
+        <p class="m-0 text-dark">
+          Việc nắm vững các nguyên tắc đạo đức và liêm chính học thuật không chỉ giúp bảo vệ danh tiếng của bản thân sinh viên mà còn là nền tảng để phát triển bền vững. Sử dụng AI có trách nhiệm đồng nghĩa với việc chúng ta làm chủ công nghệ, dùng nó để làm đòn bẩy phát triển tư duy chứ không để công nghệ thay thế chất xám của mình.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

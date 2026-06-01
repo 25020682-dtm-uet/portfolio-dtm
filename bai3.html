@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 3: Kỹ năng viết Prompt - Đặng Tiến Mạnh</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .back-btn {
+      text-decoration: none;
+      color: #0284c7;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      color: #0369a1;
+      transform: translateX(-3px);
+    }
+    .report-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 40px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    h1 { color: #111827; font-weight: 700; font-size: 1.8rem; line-height: 1.4; }
+    
+    /* Tiêu đề các phần to màu đen */
+    h2 { 
+      color: #000000; 
+      font-weight: 600; 
+      font-size: 1.35rem; 
+      margin-top: 35px; 
+      margin-bottom: 15px; 
+      border-left: 4px solid #000000; 
+      padding-left: 12px; 
+    }
+    
+    h3 { font-size: 1.15rem; font-weight: 600; color: #334155; margin-top: 20px; }
+    
+    .badge-student { background-color: #f1f5f9; color: #475569; padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; }
+    .img-evidence { border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px; background: #f8fafc; width: 100%; object-fit: cover; }
+    .img-caption { font-style: italic; color: #64748b; font-size: 0.85rem; text-align: center; margin-top: 8px; margin-bottom: 25px; }
+    
+    /* Style cho bảng so sánh Prompt */
+    .table-prompt { font-size: 0.9rem; margin-top: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .table-prompt th { background-color: #f1f5f9; color: #1e293b; font-weight: 600; }
+    .prompt-type { font-weight: 600; color: #0284c7; }
+    
+    /* Phần đánh giá màu xanh lá */
+    .highlight-box { 
+      background-color: #f0fdf4; 
+      border-left: 4px solid #16a34a; 
+      padding: 15px 20px; 
+      border-radius: 0 8px 8px 0; 
+      margin: 30px 0 10px 0; 
+    }
+    .text-success-custom { color: #15803d; }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5" style="max-width: 950px;">
+    
+    <a href="index.html#portfolio" class="back-btn mb-4">
+      <i class="bi bi-arrow-left"></i> Quay lại Trang chủ Portfolio
+    </a>
+
+    <div class="report-card">
+      <div class="border-bottom pb-4 mb-4">
+        <span class="text-uppercase text-muted small fw-bold">Bài tập 3</span>
+        <h1 class="mt-1">BÁO CÁO: KỸ NĂNG VIẾT PROMPT HIỆU QUẢ TRONG HỌC TẬP</h1>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge-student"><i class="bi bi-person-fill"></i> Đặng Tiến Mạnh</span>
+          <span class="badge-student"><i class="bi bi-card-text"></i> MSV: 25020682</span>
+          <span class="badge-student"><i class="bi bi-mortarboard-fill"></i> Lớp: CE7 - UET</span>
+        </div>
+      </div>
+
+      <p class="lead" style="font-size: 1rem; color: #475569;"><strong>Mục tiêu:</strong> Phát triển kỹ năng viết prompt hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn (AI) trong học tập. Báo cáo thực hiện trên 3 tác vụ phổ biến: Tóm tắt bài đọc, Giải thích khái niệm và Tạo bộ câu hỏi ôn tập.</p>
+
+      <h2>1. Tác vụ 1: Tóm tắt một bài đọc/tài liệu học thuật</h2>
+      <p><strong>Bối cảnh:</strong> Yêu cầu AI tóm tắt bài báo tâm lý học từ tờ New York Times về "Sự trì hoãn".</p>
+      
+      <table class="table table-bordered table-prompt">
+        <thead>
+          <tr>
+            <th width="20%">Phiên bản</th>
+            <th width="40%">Nội dung Prompt</th>
+            <th width="40%">Kết quả & Phân tích</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="prompt-type">Prompt Cơ bản</td>
+            <td>"Tóm tắt bài báo này cho tôi: [Link/Text]"</td>
+            <td>AI chỉ tóm tắt bề mặt, chung chung, thiếu các luận điểm cốt lõi về tâm lý học.</td>
+          </tr>
+          <tr>
+            <td class="prompt-type">Prompt Cải tiến</td>
+            <td>"Hãy tóm tắt các ý chính của bài báo về sự trì hoãn... thành 5 gạch đầu dòng."</td>
+            <td>Kết quả có cấu trúc dễ đọc hơn nhờ ràng buộc định dạng, nhắm đúng vào nguyên nhân.</td>
+          </tr>
+          <tr>
+            <td class="prompt-type">Prompt Nâng cao</td>
+            <td>"Bạn là một chuyên gia Tâm lý học hành vi (Role prompting). Hãy đọc bài viết... và thực hiện phân tích."</td>
+            <td><strong>Hiệu quả nhất:</strong> AI phân tích sâu sắc cơ chế phòng vệ của não bộ, bố cục logic, ứng dụng được ngay vào thực tế.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <img src="bai3/anh1.png" alt="Ảnh 1" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai3/anh1.png'">
+          <div class="img-caption">Hình 1: Prompt cơ bản yêu cầu tóm tắt chung chung</div>
+        </div>
+        <div class="col-md-6">
+          <img src="bai3/anh2.png" alt="Ảnh 2" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai3/anh2.png'">
+          <div class="img-caption">Hình 2: Kết quả từ Prompt cơ bản (thông tin sơ sài, bề mặt)</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh3.png" alt="Ảnh 3" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh3.png'">
+          <div class="img-caption">Hình 3: Prompt cải tiến (Thêm ràng buộc định dạng 5 gạch đầu dòng)</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh4.png" alt="Ảnh 4" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh4.png'">
+          <div class="img-caption">Hình 4: Prompt nâng cao (Áp dụng kỹ thuật đóng vai Chuyên gia)</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh5.png" alt="Ảnh 5" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh5.png'">
+          <div class="img-caption">Hình 5: Kết quả phân tích chuyên sâu với các hành động cụ thể</div>
+        </div>
+      </div>
+
+      <h2>2. Tác vụ 2: Giải thích một khái niệm phức tạp</h2>
+      <p><strong>Bối cảnh:</strong> Yêu cầu AI giải thích khái niệm kinh tế "Lãi suất kép" (Compound Interest).</p>
+      
+      <table class="table table-bordered table-prompt">
+        <thead>
+          <tr>
+            <th width="20%">Phiên bản</th>
+            <th width="40%">Nội dung Prompt</th>
+            <th width="40%">Kết quả & Phân tích</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="prompt-type">Prompt Cơ bản</td>
+            <td>"Lãi suất kép là gì?"</td>
+            <td>Sử dụng thuật ngữ hàn lâm và công thức toán học khô khan, khó hình dung.</td>
+          </tr>
+          <tr>
+            <td class="prompt-type">Prompt Cải tiến</td>
+            <td>"Giải thích khái niệm lãi suất kép. Cho một ví dụ cụ thể với số vốn ban đầu là 10 triệu... trong 5 năm."</td>
+            <td>Bổ sung bối cảnh thực tế giúp người đọc dễ liên hệ số liệu thông qua bảng tính.</td>
+          </tr>
+          <tr>
+            <td class="prompt-type">Prompt Nâng cao</td>
+            <td>"Bạn là một cố vấn tài chính cá nhân. Hãy giải thích khái niệm 'Lãi suất kép'... qua ẩn dụ Quả cầu tuyết."</td>
+            <td><strong>Hiệu quả nhất:</strong> Sự kết hợp giữa phép ẩn dụ (Analogy) và đóng vai giúp khái niệm trừu tượng trở nên cực kỳ sinh động, dễ hiểu.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <img src="bai3/anh6.png" alt="Ảnh 6" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh6.png'">
+          <div class="img-caption">Hình 6: Prompt cơ bản yêu cầu giải thích "Lãi suất kép"</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh7.png" alt="Ảnh 7" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh7.png'">
+          <div class="img-caption">Hình 7: Kết quả cơ bản (Sử dụng công thức toán học hàn lâm)</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh8.png" alt="Ảnh 8" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh8.png'">
+          <div class="img-caption">Hình 8: Prompt cải tiến (Yêu cầu thêm ví dụ với số vốn cụ thể)</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh9.png" alt="Ảnh 9" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh9.png'">
+          <div class="img-caption">Hình 9: Kết quả cải tiến (AI tạo bảng minh họa dòng tiền dễ hiểu)</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh10.png" alt="Ảnh 10" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh10.png'">
+          <div class="img-caption">Hình 10: Prompt nâng cao (Đóng vai cố vấn và dùng ẩn dụ "Quả cầu tuyết")</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh11.png" alt="Ảnh 11" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh11.png'">
+          <div class="img-caption">Hình 11: Kết quả nâng cao (Bảng so sánh trực quan và bài học đầu tư từ ẩn dụ)</div>
+        </div>
+      </div>
+
+      <h2>3. Tác vụ 3: Tạo bộ câu hỏi ôn tập cho một chủ đề</h2>
+      <p><strong>Bối cảnh:</strong> Thiết kế bài kiểm tra ngữ pháp Tiếng Anh về Câu điều kiện loại 1 & 2.</p>
+      
+      <table class="table table-bordered table-prompt">
+        <thead>
+          <tr>
+            <th width="20%">Phiên bản</th>
+            <th width="40%">Nội dung Prompt</th>
+            <th width="40%">Kết quả & Phân tích</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="prompt-type">Prompt Cơ bản</td>
+            <td>"Tạo cho tôi 5 câu hỏi trắc nghiệm về câu điều kiện loại 1 và 2."</td>
+            <td>AI sinh ra một bài trắc nghiệm cơ bản (sử dụng giao diện quiz có sẵn), thiếu tính tùy biến sâu và bối cảnh sử dụng ngữ pháp.</td>
+          </tr>
+          <tr>
+            <td class="prompt-type">Prompt Cải tiến</td>
+            <td>"Hãy cung cấp đáp án đúng ở cuối cùng."</td>
+            <td>Bổ sung thêm yêu cầu về cách hiển thị để tăng tính tương tác, AI tổng hợp lại cấu trúc và cung cấp đáp án chi tiết phía dưới để học viên tự đối chiếu.</td>
+          </tr>
+          <tr>
+            <td class="prompt-type">Prompt Nâng cao</td>
+            <td>"Bạn là một giáo viên Tiếng Anh ôn thi IELTS. Hãy tạo một bài kiểm tra... đặt trong ngữ cảnh kinh doanh/công sở..."</td>
+            <td><strong>Hiệu quả nhất:</strong> AI thiết lập luật chơi (yêu cầu trả lời định dạng 1A, 2B), câu hỏi được đưa vào bối cảnh thực tế (Business Context) giúp tăng tư duy thay vì chỉ học vẹt công thức.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <img src="bai3/anh12.png" alt="Ảnh 12" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh12.png'">
+          <div class="img-caption">Hình 12: Prompt cơ bản tạo câu hỏi trắc nghiệm (AI dùng giao diện quiz mặc định)</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh13.png" alt="Ảnh 13" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh13.png'">
+          <div class="img-caption">Hình 13: Kết quả cải tiến với phần tóm tắt lý thuyết và đáp án ở cuối</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai3/anh14.png" alt="Ảnh 14" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai3/anh14.png'">
+          <div class="img-caption">Hình 14: Prompt nâng cao (Đóng vai giáo viên IELTS, tạo câu hỏi ngữ cảnh công sở và tạo luật tương tác chờ người dùng trả lời)</div>
+        </div>
+      </div>
+
+      <h2>4. Tổng hợp các nguyên tắc và mẹo viết Prompt hiệu quả</h2>
+      <p>Dựa trên kết quả thử nghiệm và phân tích từ 3 tác vụ trên, em đúc kết được các nguyên tắc cốt lõi để tối ưu hóa khả năng của AI trong học tập:</p>
+      <ul>
+        <li><strong>Xác định vai trò (Role Prompting):</strong> Luôn yêu cầu AI đóng vai một chuyên gia cụ thể (VD: Chuyên gia tâm lý học, Cố vấn tài chính, Giáo viên IELTS) để định hình văn phong và độ sâu chuyên môn.</li>
+        <li><strong>Bổ sung ngữ cảnh (Context):</strong> Cung cấp đầy đủ thông tin về môi trường ứng dụng (VD: "Ngữ cảnh kinh doanh/công sở", "Cho người chưa học kinh tế").</li>
+        <li><strong>Ràng buộc định dạng (Format Constraint):</strong> Chỉ định rõ ràng đầu ra mong muốn (Bảng biểu, 5 gạch đầu dòng) thay vì để AI tự do viết.</li>
+        <li><strong>Sử dụng phép ẩn dụ (Analogy):</strong> Rất hiệu quả khi cần giải thích các khái niệm phức tạp (VD: Dùng hình ảnh "Quả cầu tuyết" để giải thích lãi kép).</li>
+        <li><strong>Thiết lập tính tương tác (Interactive):</strong> Thay vì lấy đáp án ngay, hãy yêu cầu AI thiết lập luật chơi và chờ phản hồi để biến AI thành một gia sư thực thụ.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <h4 class="text-success-custom fw-bold mb-2"><i class="bi bi-check-circle-fill"></i> Kết luận</h4>
+        <p class="m-0 text-dark">Thực hành viết Prompt là một kỹ năng thiết yếu. Sự khác biệt giữa một câu lệnh hời hợt và một câu lệnh được thiết kế cấu trúc (Prompt Engineering) dẫn đến sự chênh lệch rất lớn về chất lượng thông tin trả về. Nắm vững kỹ năng này giúp sinh viên biến các công cụ AI thành trợ lý học tập đắc lực, tăng tính chủ động và hiểu sâu vấn đề hơn.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

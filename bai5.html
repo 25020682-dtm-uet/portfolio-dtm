@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 5: AI tạo sinh hỗ trợ sáng tạo nội dung - Đặng Tiến Mạnh</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .back-btn {
+      text-decoration: none;
+      color: #0284c7;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      color: #0369a1;
+      transform: translateX(-3px);
+    }
+    .report-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 40px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    h1 { color: #111827; font-weight: 700; font-size: 1.8rem; line-height: 1.4; }
+    
+    h2 { 
+      color: #000000; 
+      font-weight: 600; 
+      font-size: 1.35rem; 
+      margin-top: 35px; 
+      margin-bottom: 15px; 
+      border-left: 4px solid #000000; 
+      padding-left: 12px; 
+    }
+    
+    h3 { font-size: 1.15rem; font-weight: 600; color: #0284c7; margin-top: 25px; margin-bottom: 10px; }
+    
+    .badge-student { background-color: #f1f5f9; color: #475569; padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; }
+    
+    .ai-tool-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px 15px;
+      margin-bottom: 15px;
+      transition: 0.3s ease;
+    }
+    .ai-tool-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-color: #cbd5e1;
+    }
+    
+    .prompt-block {
+      background-color: #f0fdfa;
+      border-left: 4px solid #0d9488;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 10px 0;
+      font-size: 0.95rem;
+    }
+
+    .edit-block {
+      background-color: #fff7ed;
+      border-left: 4px solid #ea580c;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 10px 0;
+      font-size: 0.95rem;
+    }
+    
+    .img-evidence { border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px; background: #ffffff; width: 100%; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .img-caption { font-style: italic; color: #64748b; font-size: 0.85rem; text-align: center; margin-top: 10px; margin-bottom: 25px; }
+    
+    .highlight-box { 
+      background-color: #f0fdf4; 
+      border-left: 4px solid #16a34a; 
+      padding: 15px 20px; 
+      border-radius: 0 8px 8px 0; 
+      margin: 30px 0 10px 0; 
+    }
+    .text-success-custom { color: #15803d; }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5" style="max-width: 950px;">
+    
+    <a href="index.html#portfolio" class="back-btn mb-4">
+      <i class="bi bi-arrow-left"></i> Quay lại Trang chủ Portfolio
+    </a>
+
+    <div class="report-card">
+      <div class="border-bottom pb-4 mb-4">
+        <span class="text-uppercase text-muted small fw-bold">Bài tập 5</span>
+        <h1 class="mt-1">SỬ DỤNG AI TẠO SINH HỖ TRỢ SÁNG TẠO NỘI DUNG</h1>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge-student"><i class="bi bi-person-fill"></i> Đặng Tiến Mạnh</span>
+          <span class="badge-student"><i class="bi bi-card-text"></i> MSV: 25020682</span>
+          <span class="badge-student"><i class="bi bi-mortarboard-fill"></i> Lớp: CE7 - UET</span>
+        </div>
+      </div>
+
+      <h2>I. Thông tin dự án và Sản phẩm</h2>
+      <p><strong>Tên dự án sản phẩm:</strong> Bài viết Blog/Bài báo phân tích: <em>"Tiềm năng và Thách thức của Trí tuệ Nhân tạo trong Giáo dục Đại học"</em>.</p>
+      <p><strong>Hình thức sản phẩm cuối cùng:</strong> Bài viết chuyên sâu (Article) kết hợp với hình ảnh minh họa số trực quan tạo bởi AI.</p>
+      <p><strong>Hệ sinh thái 3 công cụ AI phối hợp:</strong></p>
+      
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <div class="ai-tool-box text-center">
+            <i class="bi bi-stars text-primary fs-2"></i>
+            <h5 class="mt-2 mb-1" style="font-size: 1.05rem; font-weight:600;">1. Google Gemini</h5>
+            <span class="text-muted small">Định hướng tư duy & Lập dàn ý</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ai-tool-box text-center">
+            <i class="bi bi-robot text-success fs-2"></i>
+            <h5 class="mt-2 mb-1" style="font-size: 1.05rem; font-weight:600;">2. ChatGPT (OpenAI)</h5>
+            <span class="text-muted small">Soạn văn bản thô & Tối ưu diễn đạt</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ai-tool-box text-center">
+            <i class="bi bi-palette-fill text-warning fs-2"></i>
+            <h5 class="mt-2 mb-1" style="font-size: 1.05rem; font-weight:600;">3. DALL-E 3</h5>
+            <span class="text-muted small">Thiết kế hình ảnh minh họa gốc</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>II. Quá trình phối hợp AI và Tích hợp Sáng tạo Cá nhân</h2>
+      <p>Để đảm bảo sản phẩm đạt chất lượng xuất sắc và giữ vững vai trò làm chủ của con người (đóng góp cá nhân chiếm hơn 50%), quy trình thực hiện được chia làm 3 bước nghiêm ngặt:</p>
+
+      <h3>Bước 1: Lên ý tưởng và lập dàn ý chi tiết (Google Gemini)</h3>
+      <div class="prompt-block">
+        <strong><i class="bi bi-terminal-fill"></i> Prompt lập dàn ý:</strong> "Hãy đóng vai một chuyên gia giáo dục đại học và một nhà biên tập nội dung số. Tôi đang cần viết một bài blog dài khoảng 1000 từ với chủ đề: 'Tiềm năng và Thách thức của Trí tuệ Nhân tạo trong Giáo dục Đại học'. Hãy lập dàn ý chi tiết cho bài viết này..."
+      </div>
+      <p><strong>Đóng góp can thiệp của cá nhân tôi:</strong> Sau khi nhận dàn ý từ Gemini, tôi nhận thấy cấu trúc của AI còn nặng tính lý thuyết chung chung. Tôi đã trực tiếp sửa đổi bằng cách thêm vào phần phân tích thực trạng sinh viên Việt Nam và chèn thêm góc nhìn về "Tính liêm chính học thuật/Vấn nạn đạo văn nhờ AI" để tăng tính thời sự.</p>
+
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <img src="bai5/anh1.png" alt="Prompt trên Gemini" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai5/anh1.png'">
+          <div class="img-caption">Hình 1: Thiết lập vai trò chuyên gia để yêu cầu Gemini tạo cấu trúc khung bài viết</div>
+        </div>
+        <div class="col-md-6">
+          <img src="bai5/anh2.png" alt="Kết quả từ Gemini" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai5/anh2.png'">
+          <div class="img-caption">Hình 2: Dàn ý chi tiết do Gemini đề xuất gồm các luận điểm lớn về Giáo dục số</div>
+        </div>
+      </div>
+
+      <h3>Bước 2: Soạn thảo văn bản và trau chuốt câu từ (ChatGPT)</h3>
+      <div class="prompt-block">
+        <strong><i class="bi bi-terminal-fill"></i> Prompt viết chi tiết:</strong> "Dựa trên dàn ý đã tinh chỉnh, hãy viết nội dung chi tiết cho phần 'Tiềm năng của AI'. Sử dụng văn phong báo chí hiện đại, lập luận sắc bén và đưa ra ví dụ cụ thể liên quan đến sinh viên CNTT và Ngoại ngữ."
+      </div>
+      <div class="edit-block">
+        <strong><i class="bi bi-pencil-square"></i> Can thiệp chỉnh sửa của tác giả (Hơn 50% khối lượng từ ngữ):</strong>
+        <p class="mb-0 mt-1">Vần bản thô của ChatGPT sinh ra mắc lỗi lặp từ và hành văn bị "sặc mùi AI" (sử dụng quá nhiều từ cảm thán sáo rỗng). Tôi đã tiến hành biên tập lại hoàn toàn, cắt bỏ các đoạn lan man, bổ sung thuật ngữ chuyên ngành chính xác và trực tiếp viết tay các ví dụ thực tế dựa trên trải nghiệm học tập của bản thân tại UET để tạo tính thuyết phục sâu sắc.</p>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <img src="bai5/anh3.png" alt="Prompt trên ChatGPT" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai5/anh3.png'">
+          <div class="img-caption">Hình 3: Chuyển dữ liệu sang ChatGPT để triển khai chi tiết hóa các luận điểm</div>
+        </div>
+        <div class="col-md-6">
+          <img src="bai5/anh4.png" alt="Kết quả từ ChatGPT" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai5/anh4.png'">
+          <div class="img-caption">Hình 4: Nội dung nháp do ChatGPT khởi tạo về chủ đề cá nhân hóa lộ trình học</div>
+        </div>
+      </div>
+
+      <h3>Bước 3: Tạo hình ảnh minh họa độc quyền (DALL-E 3)</h3>
+      <div class="prompt-block">
+        <strong><i class="bi bi-terminal-fill"></i> Prompt tạo ảnh:</strong> "A futuristic university library concept art, a student interacting with a glowing holographic AI mentor, professional, isometric 3D render style, warm lighting..."
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <img src="bai5/anh5.png" alt="Tạo ảnh trên DALL-E 3" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai5/anh5.jpg'">
+          <div class="img-caption">Hình 5: Sử dụng công cụ Bing Image Creator phối hợp DALL-E 3 để sinh ảnh minh họa nghệ thuật độc quyền</div>
+        </div>
+        <div class="col-md-6">
+          <img src="bai5/anh6.png" alt="Sản phẩm hoàn chỉnh" class="img-evidence" onerror="this.src='https://placehold.co/600x400?text=bai5/anh6.jpg'">
+          <div class="img-caption">Hình 6: Sản phẩm bài viết Blog/Báo cáo số hoàn chỉnh sau khi tích hợp nội dung biên tập cá nhân và ảnh số từ AI</div>
+        </div>
+      </div>
+
+      <h2>III. Bảng đánh giá giá trị đóng góp và Tính liêm chính</h2>
+      <p>Để minh bạch hóa quá trình đồng sáng tạo cùng AI, dưới đây là bảng phân bổ tỷ lệ đóng góp thực tế vào tác phẩm số cuối cùng:</p>
+      
+      <table class="table table-bordered table-striped" style="font-size: 0.95rem;">
+        <thead class="table-dark">
+          <tr>
+            <th width="25%">Hạng mục nội dung</th>
+            <th width="25%">Phần việc AI thực hiện</th>
+            <th width="35%">Phần việc Cá nhân trực tiếp can thiệp</th>
+            <th width="15%" class="text-center">Tỷ lệ cá nhân</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ý tưởng & Dàn ý</strong></td>
+            <td>Gợi ý khung sườn cơ bản, phân chia các mục lớn.</td>
+            <td>Tái cấu trúc cốt truyện, đưa ngữ cảnh thực tế giáo dục đại học tại Việt Nam vào bài.</td>
+            <td class="text-center fw-bold text-success">50%</td>
+          </tr>
+          <tr>
+            <td><strong>Biên soạn nội dung</strong></td>
+            <td>Tạo bản dịch thô, mở rộng câu chữ dựa trên prompt.</td>
+            <td>Viết lại toàn bộ câu cú, loại bỏ văn phong máy móc, chèn ví dụ thực tế từ kinh nghiệm bản thân.</td>
+            <td class="text-center fw-bold text-success">60%</td>
+          </tr>
+          <tr>
+            <td><strong>Thiết kế hình ảnh</strong></td>
+            <td>Render hình ảnh theo mô tả.</td>
+            <td>Lên ý tưởng keyword kỹ thuật, viết prompt tiếng Anh chi tiết, lựa chọn và phối màu ảnh hài hòa với bài viết.</td>
+            <td class="text-center fw-bold text-success">50%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box">
+        <h4 class="text-success-custom fw-bold mb-2"><i class="bi bi-check-circle-fill"></i> IV. Bài học kinh nghiệm & Kết luận</h4>
+        <p class="text-dark">
+          Qua bài thực hành này, em nhận ra rằng AI tạo sinh là một trợ thủ đắc lực giúp giải phóng năng suất và kích hoạt sự sáng tạo, nhưng **nó không thể thay thế tư duy phản biện và cảm xúc của con người**. Một sản phẩm sáng tạo số chỉ thực sự có giá trị và đạt chuẩn đạo đức học thuật khi người dùng biết dùng tri thức của mình để dẫn dắt, kiểm soát và thổi "linh hồn" vào từng câu chữ mà AI tạo ra.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

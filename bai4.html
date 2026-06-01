@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 4: Kỹ năng hợp tác trực tuyến - Đặng Tiến Mạnh</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .back-btn {
+      text-decoration: none;
+      color: #0284c7;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      color: #0369a1;
+      transform: translateX(-3px);
+    }
+    .report-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 40px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    h1 { color: #111827; font-weight: 700; font-size: 1.8rem; line-height: 1.4; }
+    
+    h2 { 
+      color: #000000; 
+      font-weight: 600; 
+      font-size: 1.35rem; 
+      margin-top: 35px; 
+      margin-bottom: 15px; 
+      border-left: 4px solid #000000; 
+      padding-left: 12px; 
+    }
+    
+    h3 { font-size: 1.15rem; font-weight: 600; color: #334155; margin-top: 20px; }
+    
+    .badge-student { background-color: #f1f5f9; color: #475569; padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; }
+    
+    .tool-card {
+      background: #f8fafc;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+    .tool-card:hover { border-color: #cbd5e1; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .tool-icon { font-size: 1.5rem; color: #0284c7; margin-right: 12px; }
+
+    .img-evidence { border: 1px solid #cbd5e1; border-radius: 8px; padding: 4px; background: #ffffff; width: 100%; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .img-caption { font-style: italic; color: #64748b; font-size: 0.85rem; text-align: center; margin-top: 10px; margin-bottom: 25px; }
+    
+    .challenge-box {
+      background-color: #fff7ed;
+      border-left: 4px solid #f97316;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 15px;
+    }
+    
+    .highlight-box { 
+      background-color: #f0fdf4; 
+      border-left: 4px solid #16a34a; 
+      padding: 15px 20px; 
+      border-radius: 0 8px 8px 0; 
+      margin: 30px 0 10px 0; 
+    }
+    .text-success-custom { color: #15803d; }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5" style="max-width: 950px;">
+    
+    <a href="index.html#portfolio" class="back-btn mb-4">
+      <i class="bi bi-arrow-left"></i> Quay lại Trang chủ Portfolio
+    </a>
+
+    <div class="report-card">
+      <div class="border-bottom pb-4 mb-4">
+        <span class="text-uppercase text-muted small fw-bold">Bài tập 4</span>
+        <h1 class="mt-1">KỸ NĂNG HỢP TÁC TRỰC TUYẾN & QUẢN LÝ DỰ ÁN</h1>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge-student"><i class="bi bi-person-fill"></i> Đặng Tiến Mạnh</span>
+          <span class="badge-student"><i class="bi bi-card-text"></i> MSV: 25020682</span>
+          <span class="badge-student"><i class="bi bi-mortarboard-fill"></i> Lớp: CE7 - UET</span>
+        </div>
+      </div>
+
+      <h2>I. Bối cảnh và Vai trò cá nhân</h2>
+      <p><strong>Dự án:</strong> Gala Chào Tân.</p>
+      <p><strong>Mô tả ngắn:</strong> Nhóm chúng tôi gồm 5 thành viên thực hiện nhiệm vụ. Vai trò của tôi trong dự án là <strong>phụ trách hậu cần và lên kế hoạch</strong>.</p>
+
+      <h2>II. Các công cụ đã lựa chọn và Thiết lập</h2>
+      <p>Để đáp ứng yêu cầu công việc nhóm, cá nhân tôi đã tham gia thiết lập và sử dụng 3 công cụ thuộc các nhóm khác nhau:</p>
+      
+      <div class="tool-card d-flex align-items-center">
+        <i class="bi bi-trello tool-icon"></i>
+        <div>
+          <strong>1. Công cụ quản lý dự án (Trello):</strong> Dùng để chia công việc, theo dõi tiến độ bằng phương pháp bảng Kanban.
+        </div>
+      </div>
+      <div class="tool-card d-flex align-items-center">
+        <i class="bi bi-discord tool-icon" style="color: #5865F2;"></i>
+        <div>
+          <strong>2. Công cụ giao tiếp nhóm (Discord):</strong> Tổ chức họp trực tuyến, trao đổi nhanh các quyết định quan trọng qua kênh chat và kênh thoại.
+        </div>
+      </div>
+      <div class="tool-card d-flex align-items-center">
+        <i class="bi bi-google tool-icon" style="color: #ea4335;"></i>
+        <div>
+          <strong>3. Công cụ lưu trữ (Google Drive):</strong> Tổ chức thư mục dùng chung để lưu trữ tài liệu tham khảo, hình ảnh minh họa một cách minh bạch.
+        </div>
+      </div>
+
+      <h2>III. Thực hiện nhiệm vụ cá nhân và Minh chứng</h2>
+      <p>Trong tuần qua, tôi đã nhận các thẻ (cards) công việc được giao trên hệ thống quản lý. Tôi chủ động chia nhỏ thẻ thành các checklist cần làm, đặt thời hạn (deadline) và tự cập nhật trạng thái thẻ từ cột "To Do" (Cần làm) sang "Doing" (Đang làm) và "Done" (Hoàn thành). Việc này giúp tôi kiểm soát tốt tiến độ cá nhân.</p>
+      
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <img src="bai4/anh1.png" alt="Minh chứng Trello" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai4/anh1.png'">
+          <div class="img-caption">Hình 1: Sử dụng Trello quản lý tiến độ bằng phương pháp Kanban</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai4/anh2.png" alt="Minh chứng Discord" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai4/anh2.png'">
+          <div class="img-caption">Hình 2: Thảo luận, giao tiếp và phân công công việc qua Discord</div>
+        </div>
+        <div class="col-md-4">
+          <img src="bai4/anh3.png" alt="Minh chứng Google Drive" class="img-evidence" onerror="this.src='https://placehold.co/400x300?text=bai4/anh3.png'">
+          <div class="img-caption">Hình 3: Tổ chức lưu trữ tài liệu và phân chia thư mục trên Google Drive</div>
+        </div>
+      </div>
+
+      <h2>IV. Phân tích hiệu quả công cụ và Thách thức</h2>
+      
+      <h3>1. Đánh giá hiệu quả của công cụ đối với cá nhân</h3>
+      <ul>
+        <li><strong>Quản lý thời gian tốt hơn:</strong> Việc dùng Trello giúp tôi hình dung trực quan khối lượng công việc trong tuần, phân bổ thời gian hợp lý và không bị dồn việc vào sát ngày nộp bài.</li>
+        <li><strong>Tăng tốc độ phối hợp:</strong> Nhờ công cụ Discord, tôi có thể giao tiếp dễ dàng và tăng tương tác với các thành viên trong nhóm, từ đó cải thiện năng suất làm việc.</li>
+        <li><strong>Tính minh bạch và lưu vết:</strong> Mọi đóng góp, tài liệu tải lên trên Google Drive đều được ghi nhận bằng tài khoản cá nhân, giúp việc đánh giá chéo diễn ra công bằng và khách quan.</li>
+      </ul>
+
+      <h3>2. Thách thức gặp phải và Cách giải quyết</h3>
+      <div class="challenge-box">
+        <p class="mb-2"><strong><i class="bi bi-exclamation-triangle-fill text-warning"></i> Thách thức:</strong> Trôi tin nhắn và nhiễu loạn thông báo. Ở giai đoạn đầu, các kênh chat liên tục nhảy thông báo khiến tôi bị phân tâm, đôi khi bỏ lỡ các quyết định quan trọng của nhóm.</p>
+        <hr style="border-color: #fdba74;">
+        <p class="mb-0"><strong><i class="bi bi-lightbulb-fill text-success"></i> Cách giải quyết:</strong> Tôi đã phân loại lại luồng giao tiếp. Các trao đổi linh tinh được đưa vào một nhóm riêng, còn nhóm chat chính chỉ dùng để thông báo công việc. Tôi cũng thiết lập chỉ nhận thông báo khi được tag (<code>@mention</code>) để tránh xao nhãng.</p>
+      </div>
+
+      <div class="highlight-box mt-5">
+        <h4 class="text-success-custom fw-bold mb-2"><i class="bi bi-check-circle-fill"></i> V. Kết luận</h4>
+        <p class="m-0 text-dark">Qua quá trình thực hiện dự án "Gala Chào Tân", tôi đã rèn luyện được kỷ luật tự quản lý công việc và nâng cao năng lực sử dụng các nền tảng số. Việc thành thạo các công cụ hợp tác trực tuyến không chỉ giúp tôi hoàn thành tốt nhiệm vụ cá nhân mà còn tạo sự gắn kết chặt chẽ với toàn đội, đóng góp vào thành công chung của cả nhóm.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
